@@ -12,7 +12,10 @@ curl -X POST http://127.0.0.1:8000/api/add-test-energy-systems/ -d "count=10"
 
 ![screenshot](screenshot2.png)
 
-
 ## Ninja
 
 ![screenshot](screenshot3.png)
+
+## Energy systems
+
+![screenshot](screenshot4.png)
