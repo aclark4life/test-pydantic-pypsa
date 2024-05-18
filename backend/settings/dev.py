@@ -16,9 +16,11 @@ try:
     from .local import *
 except ImportError:
     pass
-INSTALLED_APPS.append('debug_toolbar')
-INSTALLED_APPS.append('explorer')
-INSTALLED_APPS.append('django.contrib.admindocs')
-MIDDLEWARE.append('debug_toolbar.middleware.DebugToolbarMiddleware')
-MIDDLEWARE.append('hijack.middleware.HijackUserMiddleware')
-INTERNAL_IPS = ["127.0.0.1",]
+INSTALLED_APPS.append("debug_toolbar")
+INSTALLED_APPS.append("explorer")
+INSTALLED_APPS.append("django.contrib.admindocs")
+MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
+MIDDLEWARE.append("hijack.middleware.HijackUserMiddleware")
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
