@@ -245,3 +245,5 @@ INSTALLED_APPS.append('contactpage')
 INSTALLED_APPS.append('sitepage')
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+INSTALLED_APPS.append('energy_app')
+INSTALLED_APPS.append('ninja')
