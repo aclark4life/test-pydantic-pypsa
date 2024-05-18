@@ -20,7 +20,7 @@ PROJECT_NAME = project-makefile
 PROJECT_DIRS = backend contactpage home privacy siteuser
 
 WAGTAIL_CLEAN_DIRS = home search backend sitepage siteuser privacy frontend contactpage modelformtest
-WAGTAIL_CLEAN_FILES = README.rst .dockerignore Dockerfile manage.py requirements.txt
+WAGTAIL_CLEAN_FILES = README.rst .dockerignore Dockerfile manage.py requirements.txt requirements-test.txt docker-compose.yml
 
 REVIEW_EDITOR = subl
 
@@ -2273,7 +2273,8 @@ python-setup-sdist-default:
 	python3 setup.py sdist --format=zip
 
 python-webpack-init-default:
-	python manage.py webpack_init --no-input
+	# python manage.py webpack_init --no-input
+	python manage.py webpack_init
 
 rand-default:
 	@openssl rand -base64 12 | sed 's/\///g'
