@@ -1,3 +1,3 @@
 # energy_app
 
-[screenshot](screenshot.png)
+![screenshot](screenshot.png)
