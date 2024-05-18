@@ -24,7 +24,7 @@ urlpatterns += [
     path("search/", include("search.urls")),
     path("modelformtest/", include("modelformtest.urls")),
     path("explorer/", include("explorer.urls")),
-    path("api/", include("energy_app.urls")),
+    path("api/energy/", include("energy_app.urls")),
 ]
 
 if settings.DEBUG:
