@@ -1,6 +1,7 @@
 # Create your views here.
 from ninja import NinjaAPI
 from pydantic import BaseModel, Field, validator
+from typing import List
 import pypsa
 from faker import Faker
 from .models import EnergySystem
@@ -59,6 +60,18 @@ def add_test_energy_systems(request, count: int = 10):
         return {"message": f"Added {count} test energy systems successfully."}
     except Exception as e:
         return {"detail": str(e)}
+
+
+@api.get("/energy-systems/", response=List[EnergyData])
+def list_energy_systems(request):
+    energy_systems = EnergySystem.objects.all()
+    return [EnergyData(
+        name=system.name,
+        capacity_mw=system.capacity_mw,
+        efficiency=system.efficiency,
+        cost_per_mw=system.cost_per_mw
+    ) for system in energy_systems]
+
 
 @api.get("/")
 def read_root(request):
